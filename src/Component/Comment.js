@@ -19,15 +19,6 @@ function Comment(props) {
 					<p>Comment</p>
 					<p>time</p>
 				</div>
-				{/* {bigData.map((item) => {
-					return (
-						<div className='item-blog'>
-							<p>{item.name}</p>
-							<p>{item.input}</p>
-							<p>{item.hours}</p>
-						</div>
-					)
-				})} */}
                 <div>
 				{localData.map((item) => {
 					return (
