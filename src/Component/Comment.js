@@ -7,9 +7,8 @@ function Comment(props) {
 	const onAddComment = (data) => {
 		setBigData([...bigData, data])
 		localStorage.setItem('name', JSON.stringify([...bigData, data]))
-
 	}
-    let localData = JSON.parse(localStorage.getItem('name')) || []
+	let localData = JSON.parse(localStorage.getItem('name')) || []
 	return (
 		<div className='main-wrapper'>
 			<Form onAdd={onAddComment} />
@@ -19,17 +18,17 @@ function Comment(props) {
 					<p>Comment</p>
 					<p>time</p>
 				</div>
-                <div>
-				{localData.map((item) => {
-					return (
-						<div className='item-blog'>
-							<p>{item.name}</p>
-							<p>{item.input}</p>
-							<p>{item.hours}</p>
-						</div>
-					)
-				})}
-                </div>
+				<div>
+					{localData.map((item) => {
+						return (
+							<div className='item-blog'>
+								<p>{item.name}</p>
+								<p>{item.input}</p>
+								<p>{item.hours}</p>
+							</div>
+						)
+					})}
+				</div>
 			</div>
 		</div>
 	)

@@ -39,3 +39,6 @@ form div{
 .header-wrapper p{
     text-decoration: underline;
 }
+form input{
+    text-align: center;
+}
