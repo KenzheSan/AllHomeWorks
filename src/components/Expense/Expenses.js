@@ -21,7 +21,6 @@ function Expenses(props) {
 				selected={filteredYear}
 				onChangeFilter={filterChangeHundler}
 			/>
-
 			{showExpense.map((el, id) => {
 				return (
 					<ExpenseItem
