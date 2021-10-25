@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import ExpenseForm from "./ExpenseForm";
 import './NewExpense.css';
 
@@ -10,8 +10,22 @@ const NewExpense = (props) => {
         }
         props.onAddExpense(expenseData)
     }
+    const Magic = () =>{
+        const [changes,setChanges] = useState(false)
+        return (
+            <div>
+                <button onClick={()=>{
+                    setChanges(true)
+                }}>Note the Expense</button >
+                <button onClick={()=>{
+                    setChanges(false)
+                }}>Hide the Expense</button>
+                {changes && <ExpenseForm onSaveExpenseData = {onSaveExpenseDataHundler}/>}
+            </div>
+        )
+    }
     return <div className='new-expense'>
-        <ExpenseForm onSaveExpenseData = {onSaveExpenseDataHundler}/>
+        <Magic/>
     </div>
 }
 
