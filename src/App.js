@@ -1,10 +1,5 @@
-import React from "react"
-import  Comment  from "./Component/Comment"
-
 function App() {
-	return <div>
-    <Comment/>
-  </div>
+	return <div></div>
 }
 
 export default App
