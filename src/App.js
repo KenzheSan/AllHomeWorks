@@ -1,9 +1,9 @@
 import React from "react"
-import  Comment  from "./Component/Comment"
+import Wrapper from "./components/Wrapper/Wrapper"
 
 function App() {
 	return <div>
-    <Comment/>
+    <Wrapper/>
   </div>
 }
 
